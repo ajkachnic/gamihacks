@@ -1,0 +1,22 @@
+@font-face {
+  font-family: "Switzer";
+  src: url("/fonts/Switzer.woff2") format("woff2");
+  font-weight: 300 900;
+  font-style: normal;
+  font-display: swap;
+  letter-spacing: 0.02em;
+}
+
+body {
+  @apply text-neutral-700 font-sans m-auto p-0 m-0 bg-white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+b {
+  @apply font-serif text-neutral-900;
+}
