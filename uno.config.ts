@@ -9,9 +9,7 @@ export default defineConfig({
   theme: {
     fontFamily: {
       serif: "Instrument Serif, serif",
-      // sans: "Switzer",
       sans: "Neue Montreal, Inter, sans-serif",
-      // sans: "Inter",
     },
   },
 });
