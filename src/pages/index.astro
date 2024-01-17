@@ -42,6 +42,28 @@ import Button from "../components/button.astro";
       property="twitter:image"
       content="https://gamihacks.org/assets/og.png"
     />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Event",
+        "name": "GamiHacks",
+        "startDate": "2024-04-13T11:30:00.000Z",
+        "endDate": "2024-04-14T00:30:00.000Z",
+        "location": {
+          "@type": "Place",
+          "name": "Absegami High School",
+          "address": {
+            "@type": "PostalAddress",
+            "streeetAddress": "201 South Wrangleboro Road",
+            "postalCode": "08205",
+            "addressLocality": "Galloway",
+            "addressRegion": "NJ",
+            "addressCounty": "US"
+          }
+        },
+        "description": "An in-person hackathon for 100 high schoolers in Galloway, New Jersey. Hosted at Absegami High School"
+      }
+    </script>
 
     <title>GamiHacks</title>
   </head>
