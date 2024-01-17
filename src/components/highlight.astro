@@ -1,0 +1,17 @@
+---
+interface Props {
+  color: "yellow" | "gray";
+}
+
+const { color } = Astro.props;
+
+const classes = {
+  base: "px-1 py-1 rounded-md font-medium inline-block",
+  yellow: "bg-yellow-400 text-yellow-500 bg-opacity-30",
+  gray: "bg-gray-700 text-gray-300 bg-opacity-50",
+};
+---
+
+<span class:list={[classes.base, classes[color]]}>
+  <slot />
+</span>

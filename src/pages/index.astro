@@ -2,7 +2,9 @@
 import "@fontsource/instrument-serif";
 
 import Card from "../components/card.astro";
-import "../styles/global.css";
+import NoiseGradient from "../components/noise-gradient.astro";
+import Highlight from "../components/highlight.astro";
+import Button from "../components/button.astro";
 ---
 
 <html lang="en">
@@ -44,114 +46,106 @@ import "../styles/global.css";
     <title>GamiHacks</title>
   </head>
   <body>
-    <section class="bg-black text-neutral-200 w-full">
-      <div class="max-w-3xl m-auto p-8">
+    <section class="text-neutral-200 w-full relative">
+      <NoiseGradient />
+      <div class="max-w-3xl m-auto px-8 py-12">
         <header>
-          <span class="font-serif text-2xl"
-            ><span class="text-yellow-400">Gami</span>Hacks</span
+          <span class="font-sans tracking-tight font-bold text-lg md:text-2xl select-none"
+            >GamiHacks</span
           >
         </header>
-        <h1 class="text-4xl md:text-6xl xl:text-7xl text-white font-400">
+        <h1 class="text-4xl md:text-6xl xl:text-7xl text-white tracking-tight ">
           In-person hackathon for <span class="text-yellow-400"
-            >high schoolers</span
+            >high schoolers.</span
           >
         </h1>
 
         <div>
-          <p>
-            <strong class="text-white">When?</strong> January 13th, 7:30am to 8:30pm
-          </p>
-          <p>
-            <strong class="text-white">Where?</strong> Absegami High School, Atlantic
-            County, NJ
-          </p>
+          GamiHacks will be hosted at <Highlight color="yellow">
+            Absegami High School
+          </Highlight> on <Highlight color="gray">
+            April 13th, 2024
+          </Highlight>
         </div>
 
-        <div class="flex gap-8 mt8">
-          <button
-            class="border-none bg-yellow-400 font-bold font-sans"
+        <div class="mt-6 space-x-4">
+          <Button href="https://forms.gle/1mAv4MW3WWmP2d5b9" variant="primary">
+            Register
+          </Button>
+          <Button
+            href="https://bank.hackclub.com/donations/start/gamihacks"
+            variant="secondary"
           >
-            <a
-              class="text-black decoration-none py-4 px-8 block"
-              href="https://forms.gle/1mAv4MW3WWmP2d5b9"
-              target="_blank"
-            >
-              Register
-            </a>
-          </button>
-          <button
-            class="border-none bg-neutral-100 text-black font-bold font-sans"
-          >
-            <a
-              href="https://bank.hackclub.com/donations/start/gamihacks"
-              class="text-black decoration-none py-4 px-8 block"
-              target="_blank">Donate</a
-            >
-          </button>
+            Donate
+          </Button>
         </div>
       </div>
     </section>
-    <section class="">
-      <div class="pt-8 pb-2 px-8 max-w-3xl m-auto">
+    <section>
+      <div class="max-w-3xl m-auto p-4 md:p-8">
+        <h2 class="text-2xl xl:text-3xl">What the heck is a hackathon???</h2>
         <p>
-          <strong>GamiHacks</strong> will be hosted at Absegami High School (located
-          in Galloway), and is organized entirely by Absegami students. All levels
-          of experience are welcome to come, write some code, and have some fun.
-          Throughout the day, there will be workshops and events running. Mentors
-          will be around to offer their expertise and assistance.
+          A hackathon is a chance for you and your friends to get together to
+          create something! It's about enjoying the process of building things,
+          also known as hacking. Whether you're a seasoned developer or new to
+          it, there's something for everyone.
         </p>
 
+        <h2 class="text-2xl">Why should I go?</h2>
         <p>
-          As the event gets closer, we'll share more information about food,
-          prizes, judging, and overall logistics. Make sure you keep your eye on
-          our social media!
+          It's gonna be fun! There'll be workshops, food, prizes (oou aahh), and
+          more surprises! You'll get to spend time with friends and meet new
+          people. It's gonna be a great time for everyone involved!
         </p>
+        <!--
+        <div class="grid gap-4 md:grid-cols-3 mt-6 mb-4">
+          <div class="bg-gray-200 w-50 h-54"></div>
+          <div class="bg-gray-200 w-50 h-54"></div>
+          <div class="bg-gray-200 w-50 h-54"></div>
+        </div>
+        -->
       </div>
     </section>
-    <section class="">
-      <div class="max-w-3xl m-auto px-8 mt-8 mb-16">
-        <h2 class="mt-4">Frequently Asked Questions</h2>
+    <!--<section class="bg-black text-gray-300">
+      <div class="max-w-3xl m-auto p-4 md:p-8">
+        
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-3 m-0 p-0">
-          <Card title={'What is a "hackathon"?'}>
-            A hackathon is a competitive programming event. For GamiHacks,
-            approximately 100 people are going to gather, work on cool projects,
-            and then show them off.
-          </Card>
-          <Card title="How much does it cost?">
-            Nothing! As a participant, the event is completely free, thanks to
-            the support of our sponsors. If you're curious about our expenses,
-            our bank account is <a
-              target="_blank"
-              href="https://bank.hackclub.com/gamihacks">fully transparent</a
+        <div class="grid gap-4 md:grid-cols-3 mt-6 mb-4">
+          <div class="bg-gray-200 w-50 h-54"></div>
+          <div class="bg-gray-200 w-50 h-54"></div>
+          <div class="bg-gray-200 w-50 h-54"></div>
+        </div>
+      </div>
+    </section> -->
+    <section class="bg-black text-gray-300">
+      <div class="max-w-3xl m-auto p-4 md:p-8">
+        <h2 class="text-2xl text-gray-100">Frequently Asked Questions</h2>
+        <div>
+          <h3 class="text-xl text-gray-100">What do I need?</h3>
+          <p>
+            The most important thing to bring is a laptop (and a charger).
+            You'll also want to bring some form of ID, and any other tech you
+            want to hack on. We'll provide food, drinks, and swag!
+          </p>
+        </div>
+        <div>
+          <h3 class="text-xl text-gray-100">Do I need programming experience?</h3>
+          <p>
+            Nope! We recommend having some experience, but if you don't having
+            any going in, that's okay too. There will be mentors, workshops, and
+            other resources for you, especially if you don't have much
+            experience. We'll also have a beginner track for those who want to
+            learn. <strong
+              >You can come into GamiHacks with no experience, but you can't
+              leave without learning something new!</strong
             >
-          </Card>
-          <Card title="What do I need to bring?">
-            We recommend you bring ID, a laptop (and appropriate chargers). If
-            you can't bring one or don't have one, there will also be computers
-            at the venue that you can use (<em
-              >but you can't install software on them</em
-            >)
-          </Card>
-          <Card title="Do I need a team?">
-            Nope! You're free to come with a team, and you can work alone if
-            you'd like. We'll have an event for forming teams at the beginning
-            of the event.
-          </Card>
-          <Card title="Do I need programming experience?">
-            We recommend that you have some programming experience, but if you
-            don't, that's okay! We'll have workshops and mentors to help you
-            out.
-          </Card>
-          <Card title="How many people will be there?">
-            We're aiming for around 100 participants. That said, we're still far
-            away from the event so it's still up in the air. Bring your friends!
-          </Card>
+          </p>
         </div>
       </div>
     </section>
+
     <footer class="text-center bg-black text-gray-200">
-      <div class="max-w-2xl p-16 m-auto">
+      <div class="max-w-2xl p-4 md:p-16 m-auto">
         <p>
           <!-- <a class="text-white font-bold" href="/conduct">Code of Conduct</a> ·  -->
           <a class="text-white font-bold" href="https://instagram.com/gamihacks"

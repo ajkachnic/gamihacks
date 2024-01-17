@@ -7,8 +7,9 @@
   letter-spacing: 0.02em;
 }
 
-body {
-  @apply text-neutral-700 font-sans m-auto p-0 m-0 bg-white;
+body,
+html {
+  @apply text-neutral-700 font-sans m-auto p-0 m-0;
 }
 
 h1,
@@ -18,5 +19,10 @@ h4,
 h5,
 h6,
 b {
-  @apply font-serif text-neutral-900;
+  @apply font-sans font-bold text-neutral-900;
+}
+
+/* Good defaults for buttons */
+button {
+  @apply font-sans font-600 border-none px-4 py-2 rounded-sm;
 }
